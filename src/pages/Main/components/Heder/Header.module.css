@@ -1,0 +1,36 @@
+.header {
+    padding: 10px;
+    background: burlywood;
+    align-items: center;
+    display: flex;
+}
+
+.headerLogo {
+    text-align: center;
+    flex: 1;
+    color: brown;
+    margin: 0;
+}
+
+.headerUser {
+    display: flex;
+    align-items: center;
+}
+
+.headerUserText {
+    font-size: 14px;
+    line-height: 1.5;
+
+    margin-right: 15px;
+}
+
+.headerUserImg {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-radius: 50%;
+}

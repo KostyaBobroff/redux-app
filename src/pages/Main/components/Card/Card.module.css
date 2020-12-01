@@ -1,0 +1,38 @@
+.card {
+    width:  300px;
+    padding: 15px;
+    display: inline-block;
+
+    -webkit-box-shadow: 6px 6px 28px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 28px -2px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 28px -2px rgba(0,0,0,0.75);
+
+    border-radius: 6px;
+
+    transition: 0.3s ease-out transform;
+
+    transform: scale(1);
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.cardImg {
+    width: 100%;
+    height: 150px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cardText {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cardPrice {
+    font-weight: bold;
+}

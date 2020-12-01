@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Сдать курсач",
+      "description": "Ох, сложновато наверное",
+      "img": "https://pravdaurfo.ru/sites/default/files/40d_0.jpg",
+      "price": "30000 $"
+    },
+    {
+      "id": 2,
+      "title": "Зачет по фронтенду",
+      "description": "Это зачет по фронтенду, пожалуйста повторите верстку, JS, React ",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/174930/pub_5c763577b40ff300b3450373_5c7635adbe549400b427d6d6/scale_1200",
+      "price": "3 бутылочки пива"
+    },
+    {
+      "id": 3,
+      "title": "Зачет по Бекенду",
+      "description": "Это зачет по бекенду, спросите все у ЕГОРА ",
+      "img": "https://cs10.pikabu.ru/post_img/2018/08/21/0/1534798847152342914.jpg",
+      "price": "Я хз"
+    }
+  ]
+}
