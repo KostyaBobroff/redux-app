@@ -1,23 +1,23 @@
 import * as React from 'react';
-import { useSelector} from "react-redux";
-import { user} from '../../../../store'
+import {observer} from 'react-mobx';
 import styles from './Header.module.css';
+import {useUserStore} from "../../../../store";
 
 const Header = () => {
-  const userEntity = useSelector(user.getUser);
+  const userStore = useUserStore();
 
   return (
     <div className={styles.header}>
       <h2 className={styles.headerLogo}>Магазин на диване</h2>
       <div className={styles.headerUser}>
         <div className={styles.headerUserImg} style={{
-          backgroundImage: `url(${userEntity.img})`
+          backgroundImage: `url(${userStore.img})`
         }} />
-        <div className={styles.headerUserText}>{userEntity.name}</div>
-        <div className={styles.headerUserText}>{userEntity.email}</div>
+        <div className={styles.headerUserText}>{userStore.name}</div>
+        <div className={styles.headerUserText}>{userStore.email}</div>
       </div>
     </div>
   );
 }
 
-export default Header;
+export default observer(Header);

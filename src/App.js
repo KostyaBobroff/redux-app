@@ -1,15 +1,13 @@
-import {Provider} from 'react-redux'
-import store from './store';
-import './App.css';
-
+import * as React from 'react';
+import {Provider} from 'react-mobx';
 import Main from './pages/Main';
 
-function App() {
-  return (
-    <Provider store={store}>
-      <Main />
-    </Provider>
-  );
-}
+import stores from './store';
+
+const App = () => (
+  <Provider {...stores}>
+    <Main />
+  </Provider>
+)
 
 export default App;

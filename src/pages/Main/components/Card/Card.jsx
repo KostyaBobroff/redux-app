@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './Card.module.css';
+import {observer} from 'react-mobx';
 import cn from 'classnames';
 
 const Card = ({className, img, title, description, price}) => {
@@ -15,4 +16,4 @@ const Card = ({className, img, title, description, price}) => {
   )
 }
 
-export default Card;
+export default observer(Card);

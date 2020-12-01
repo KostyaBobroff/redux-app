@@ -1,35 +1,27 @@
 import * as React from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import { observer } from "mobx-react"
 import Header from './components/Heder';
 import Card from './components/Card';
 import {products, user} from '../../store';
 import styles from './Main.module.css';
-
+import {useRootStore, useProductsStore} from "../../store";
 
 
 const Main = () => {
-  const dispatch = useDispatch()
-  const productsInfo = useSelector(products.getProducts);
+  const rootStore = useRootStore();
+  const productsStore = useProductsStore();
 
   React.useEffect(() => {
-
-    const  init = async () => {
-      await Promise.all([
-        dispatch(user.actions.fetchUser()),
-        dispatch(products.actions.fetchProducts())
-      ]);
-    }
-
-    init();
+    rootStore.init();
   }, [])
 
   return (
     <div className={styles.main}>
       <Header />
       <div className={styles.mainContainer}>
-        {productsInfo.isLoading ? 'Загрузка...': (
+        {productsStore.isLoading ? 'Загрузка...': (
           <>
-            {productsInfo.order.map(id => <Card className={styles.mainCard} key={id} {...productsInfo.entities[id]}/>)}
+            {productsStore.products.map(entity => <Card className={styles.mainCard} key={entity.id} {...entity}/>)}
           </>
         )}
       </div>
@@ -37,4 +29,4 @@ const Main = () => {
   );
 }
 
-export default Main;
+export default observer(Main);
