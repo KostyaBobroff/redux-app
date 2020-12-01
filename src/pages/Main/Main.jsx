@@ -15,8 +15,8 @@ const Main = () => {
 
     const  init = async () => {
       await Promise.all([
-        dispatch(user.fetchUser()),
-        dispatch(products.fetchProducts())
+        dispatch(user.actions.fetchUser()),
+        dispatch(products.actions.fetchProducts())
       ]);
     }
 
